@@ -1,0 +1,10 @@
+---
+kvmhost_packages:
+  - libvirt
+  - cockpit-machines
+  - python3-libvirt
+  - python3-lxml
+
+kvmhost_groups:
+  - libvirt
+  - kvm
