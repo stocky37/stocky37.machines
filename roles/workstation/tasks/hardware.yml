@@ -1,0 +1,13 @@
+---
+- name: check input hardware
+  command: lshw -short -c input
+  become: yes
+  register: input_hardware
+
+- when: input_hardware.stdout | lower is search("razer")
+  include_role:
+    name: stocky37.openrazer
+
+- when: input_hardware.stdout | lower is search("corsair")
+  include_role:
+    name: stocky37.ckb-next

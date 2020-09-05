@@ -1,0 +1,24 @@
+---
+- name: install laptop packages
+  include_tasks:
+    file: packages.yml
+  vars:
+    packages: "{{ laptop_packages }}"
+
+- when: lower(ansible_product_version) is search("thinkpad")
+  block:
+    - name: install linrunner repo
+      package:
+        state: present
+        name: "{{ tlp_linrunner_repo_url }}"
+
+    - name: install thinkpad packages
+      include_tasks:
+        file: packages.yml
+      vars:
+        packages: "{{ thinkpad_packages }}"
+
+
+
+
+

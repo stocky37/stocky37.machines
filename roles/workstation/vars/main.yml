@@ -1,0 +1,4 @@
+---
+tuned_profiles:
+  Laptop: balanced
+  Desktop: desktop

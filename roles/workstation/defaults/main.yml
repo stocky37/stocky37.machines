@@ -1,0 +1,56 @@
+---
+tuned_active_builtin_profile: "{{ tuned_profiles[ansible_form_factor] }}"
+
+packages:
+  - snapd
+  - gnome-tweaks
+
+flatpak_remotes:
+  - https://flathub.org/repo/flathub.flatpakrepo
+
+flatpaks:
+  - spotify
+  - io.atom.atom
+
+laptop_packages:
+  - thermald
+  - tlp
+  - tlp-rdw
+
+thinkpad_packages:
+  - kernel-devel
+  - akmod-acpi_call
+  - akmod-tp_smapi
+
+tlp_linrunner_repo_url: http://repo.linrunner.de/fedora/tlp/repos/releases/tlp-release.fc{{ ansible_distribution_major_version }}.noarch.rpm
+
+workstation_guake_keybind: <Alt>space
+workstation_guake_unbind: activate-window-menu
+
+workstation_guake_prefs:
+  general:
+    'abbreviate-tab-names': 'true'
+    'gtk-prefer-dark-theme': 'true'
+    'infinite-history': 'true'
+    'max-tab-name-length': 25
+    'mouse-display': 'true'
+    'open-tab-cwd': 'true'
+    'prompt-on-quit': 'true'
+    'restore-tabs-notify': 'true'
+    'restore-tabs-startup': 'true'
+    'save-tabs-when-changed': 'true'
+    'scroll-keystroke': 'true'
+    'start-at-login': 'true'
+    'start-fullscreen': 'true'
+    'window-halignment': 0
+    'window-height': 50
+    'window-losefocus': 'false'
+    'window-refocus': 'false'
+    'window-tabbar': 'true'
+    'window-width': 100
+  style:
+    'cursor-shape': 1
+    font:
+      'palette-name': "'Argonaut'"
+    background:
+      transparency: 90
