@@ -5,6 +5,7 @@ core_packages:
   - sl
   - jq
   - git-delta
+  - git-filter-repo
   - the_silver_searcher
   - zsh
   - tuned
