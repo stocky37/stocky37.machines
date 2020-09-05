@@ -1,0 +1,21 @@
+---
+- name: Install packages
+  become: yes
+  package:
+    name: "{{ development_packages }}"
+    state: present
+  tags: dnf
+
+- name: Install flatpaks
+  flatpak:
+    name: "{{ item }}"
+    state: present
+    method: user
+  loop: "{{ development_flatpaks }}"
+  tags: flatpak
+
+- name: Install snaps
+  become: yes
+  snap:
+    name: "{{ development_snaps }}"
+  tags: snaps

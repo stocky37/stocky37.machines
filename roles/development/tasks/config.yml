@@ -1,0 +1,10 @@
+---
+- name: configure sysctl limits
+  become: yes
+  sysctl:
+    state: present 
+    name: "{{ option.key }}"
+    value: "{{ option.value }}"
+  loop: "{{ development_sysctl }}"
+  loop_control:
+    loop_var: option
