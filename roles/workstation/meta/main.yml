@@ -1,28 +1,3 @@
-dependencies:
-  - name: jaredhocutt.google_chrome
-
-  - name: stocky37.linux-core
-    src: https://github.com/stocky37/ansible-linux-core.git
-
-  - name: stocky37.guake
-    src: https://github.com/stocky37/ansible-guake.git
-    vars:
-      guake_keybind: "{{ workstation_guake_keybind }}"
-      guake_unbind: "{{ workstation_guake_unbind }}"
-      guake_prefs: "{{ workstation_guake_prefs }}"
-
-  - name: giovtorres.tuned
-    when: false
-
-  - name: stocky37.openrazer
-    src: https://github.com/stocky37/ansible-openrazer.git
-    when: false
-
-  - name: stocky37.ckb-next
-    src: https://github.com/stocky37/ansible-ckb-next.git
-    when: false
-
-
 galaxy_info:
   author: your name
   description: your role description
@@ -64,4 +39,13 @@ galaxy_info:
     #
     # NOTE: A tag is limited to a single word comprised of alphanumeric characters.
     #       Maximum 20 tags per role.
+dependencies:
+  - name: jaredhocutt.google_chrome
+    when: false
+  - name: giovtorres.tuned
+    when: false
 
+collections:
+  - ansible.builtin
+  - community.general
+  - stocky37.core

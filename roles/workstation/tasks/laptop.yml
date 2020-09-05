@@ -17,8 +17,3 @@
         file: packages.yml
       vars:
         packages: "{{ thinkpad_packages }}"
-
-
-
-
-

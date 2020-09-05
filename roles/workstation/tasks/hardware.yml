@@ -3,11 +3,12 @@
   command: lshw -short -c input
   become: yes
   register: input_hardware
+  changed_when: false
 
 - when: input_hardware.stdout | lower is search("razer")
   include_role:
-    name: stocky37.openrazer
+    name: openrazer
 
 - when: input_hardware.stdout | lower is search("corsair")
   include_role:
-    name: stocky37.ckb-next
+    name: ckb_next

@@ -3,7 +3,4 @@
 - include_tasks: hardware.yml
 - include_tasks: laptop.yml
   when: ansible_form_factor == "Laptop"
-- include_role:
-    name: giovtorres.tuned
-    apply:
-      become: yes
+- include_tasks: roles.yml
