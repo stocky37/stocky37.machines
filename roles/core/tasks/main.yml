@@ -4,3 +4,10 @@
   package:
     name: "{{ core_packages | default([]) }}"
     state: present
+
+- name: Configure details
+  include_role:
+    name: dotfiles
+  vars:
+    dotfiles_root: "{{ core_dotfiles_root }}"
+    dotfiles_repos: "{{ core_dotfiles_repos }}"
