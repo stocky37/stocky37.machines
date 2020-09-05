@@ -1,8 +1,3 @@
-dependencies:
-  - name: jaredhocutt.jetbrains_toolbox
-    src: https://github.com/jaredhocutt/ansible-jetbrains-toolbox.git
-  - name: stocky37.oc
-    src: https://github.com/stocky37/ansible-oc.git
 
 galaxy_info:
   author: your name
@@ -45,3 +40,12 @@ galaxy_info:
     #
     # NOTE: A tag is limited to a single word comprised of alphanumeric characters.
     #       Maximum 20 tags per role.
+dependencies:
+  - name: jaredhocutt.jetbrains_toolbox
+    src: https://github.com/jaredhocutt/ansible-jetbrains-toolbox.git
+    when: false
+
+collections:
+  - ansible.builtin
+  - ansible.posix
+  - community.general

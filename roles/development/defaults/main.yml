@@ -20,7 +20,6 @@ development_packages:
   - asciidoctor
 
 development_flatpaks:
-  - io.atom.atom
   - com.visualstudio.code.oss
 
 development_snaps:
