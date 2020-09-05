@@ -1,6 +1,3 @@
-dependencies:
-  - name: jaredhocutt.rpmfusion
-
 galaxy_info:
   author: your name
   description: your role description
@@ -42,3 +39,11 @@ galaxy_info:
     #
     # NOTE: A tag is limited to a single word comprised of alphanumeric characters.
     #       Maximum 20 tags per role.
+
+dependencies:
+  - name: jaredhocutt.rpmfusion
+    when: false
+
+collections:
+  - ansible.builtin
+  - community.general
