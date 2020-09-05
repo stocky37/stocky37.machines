@@ -48,11 +48,10 @@ galaxy_info:
     #       Maximum 20 tags per role.
 
 dependencies:
-  - name: stocky37.wol
-    src: git+https://github.com/stocky37/ansible-role-wol.git
-  - name: stocky37.zfs
-    src: git+https://github.com/stocky37/ansible-role-zfs.git
-  - name: stocky37.linux-core
-    src: git+https://github.com/stocky37/ansible-role-linux-core.git
   - name: stackhpc.libvirt-host
     when: false
+
+collections:
+  - ansible.builtin
+  - community.general
+  - stocky37.core
