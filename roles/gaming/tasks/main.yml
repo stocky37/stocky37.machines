@@ -1,0 +1,14 @@
+---
+- name: install packages
+  become: yes
+  dnf:
+    state: present
+    name: "{{ gaming_packages }}"
+
+- name: install flatpaks
+  flatpak:
+    name: "{{ item }}"
+    state: present
+    method: user
+  loop: "{{ gaming_flatpaks }}"
+  tags: flatpak

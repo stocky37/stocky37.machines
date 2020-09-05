@@ -1,0 +1,8 @@
+---
+gaming_packages:
+  - kernel-devel
+  - steam
+  - kmod-nvidia
+
+gaming_flatpaks:
+  - discord
